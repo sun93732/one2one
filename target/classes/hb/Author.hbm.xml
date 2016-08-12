@@ -9,5 +9,6 @@
         </id>
         <property name="name" column="name" />
         <property name="email" column="email" />
+        <one-to-one name="book" property-ref="author"/>
     </class> 
 </hibernate-mapping>

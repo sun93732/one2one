@@ -35,7 +35,7 @@ public class BooksManager {
     newBook.setAuthor(new Author("Joshua Bloch", "joshua.bloch@gmail.com"));
     // persists the book entity
     Long bookId = (Long) session.save(newBook);
-
+    
     // gets the book entity back
     Book book = (Book) session.get(Book.class, bookId);
     System.out.println("Title: " + book.getTitle());
@@ -45,8 +45,7 @@ public class BooksManager {
     System.out.println("Author's name: " + author.getName());
     System.out.println("Author's email: " + author.getEmail());
 
-    book.setAuthor(null);
-    session.delete(author);
+    
     session.getTransaction().commit();
     session.close();
     ;

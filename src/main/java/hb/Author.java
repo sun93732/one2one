@@ -6,6 +6,16 @@ public class Author {
   private String name;
 
   private String email;
+  
+  private Book book;
+
+  public Book getBook() {
+    return book;
+  }
+
+  public void setBook(Book book) {
+    this.book = book;
+  }
 
   public Author() {
   }
